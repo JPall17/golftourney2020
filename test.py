@@ -6,12 +6,12 @@ from oauthlib.oauth2 import BackendApplicationClient as BAC
 
 
 
-client_id = r'LnwER6D1cvADWcrXJr2PaH2Wjo8a'
-client_secret = r'kB6GKnsJzhxqsBcI5S2jzVyoe9Ua'
+client_id = r'id'
+client_secret = r'secret'
 
 client = BAC(client_id=client_id)
 oauth = OAuth2Session(client=client)
-myToken = oauth.fetch_token(token_url='https://api-test.pgatourhq.com:8243/token', client_id=client_id, client_secret=client_secret)
+myToken = oauth.fetch_token(token_url='URL', client_id=client_id, client_secret=client_secret)
 s = str(myToken)
 pieces = s.split(',')
 piece = pieces[0].split('\'')
